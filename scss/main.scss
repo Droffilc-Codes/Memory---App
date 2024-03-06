@@ -1,0 +1,121 @@
+@import 'variables';
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: $primary-font-style;
+    background-image: linear-gradient(to top left, #e3dde5 0%, $background-color 100%);
+    height: 400vh;
+   overflow: hidden;
+}
+
+.welcome{
+    justify-content: center;
+    background: white;
+    width: 700px;
+    margin: auto;
+    box-shadow: inset;
+    padding: 5px;
+}
+h1{
+    font-size: $primary-font-size;
+    color: $secondary-font-color;
+    text-align: center;
+    background: $secondary2-background-color;
+}
+
+
+
+.first-box{
+    margin: 1rem auto;
+    width: 120px;
+    display: block;
+    
+    border-radius: 9px;
+    background: $secondary-background-color;
+    padding: 5px;
+
+    
+    .image-container{
+        display: flex;
+        .top-image{
+            padding: 5px;
+            margin: 0 auto;
+
+        }
+    }
+}
+
+
+    
+.second-box{
+    margin: 2rem auto;
+    width: 125px;
+    border-radius: 9px;
+    background: $secondary2-background-color;
+    padding: 10px;
+    display: block;
+    
+    .select-face-container{
+        display: block;
+       
+        }
+}
+
+
+#select-image{
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+}
+
+.second-box:hover{
+    cursor: pointer;
+    transition: all 0.5s;
+    transform: rotate(-10deg);
+}
+
+.top-image{
+    height: 150px;
+    width: 100px;
+}
+
+.bottom-image{
+    height: 150px;
+    width: 100px;
+}
+
+#footer{
+    margin: 5px auto;
+    text-align: center;
+    font-size: 12px;
+}
+
+.restart {
+    position: absolute;
+    z-index: 3;
+    top: 100px;
+    left: 1040px;
+    color: rgb(222, 72, 72);
+    text-transform: uppercase;
+    font-size: medium;
+
+    text-align: center;
+    justify-content: center;
+
+    .button{
+        position: relative;
+        cursor: pointer; 
+    }
+    .button:hover{
+        background: $secondary2-background-color;
+        color: $secondary-font-color;
+    }
+}
+
+.tracjert{
+    
+}
