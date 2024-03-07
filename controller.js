@@ -54,8 +54,14 @@ playButton.addEventListener('click', clickPlayButton);
 function clickPlayButton() {
     // Bring back top image - randomly
     location.reload();
+    
 }
 
+// The game controller
+controller1()
+
+
+function controller1 (){
 //re-order the arrays of Faces
 // theFaces.sort(()=> 0.5 - Math.random() )
 let randomValue = Math.floor(Math.random() * theFaces.length)
@@ -103,6 +109,10 @@ userChoice.addEventListener('click', (e)=>{
         clearInterval(countDownFaces)
     }
 })
+
+}
+
+
 
 
 // Have a Restart Button
