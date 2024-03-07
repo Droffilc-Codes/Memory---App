@@ -103,7 +103,6 @@ h1{
     text-transform: uppercase;
     font-size: medium;
 
-    
     text-align: center;
     justify-content: center;
 
@@ -111,6 +110,7 @@ h1{
         position: relative;
         cursor: pointer; 
         border-radius: 100%;
+
     }
     .button:hover{
         background: $secondary2-background-color;
@@ -118,7 +118,9 @@ h1{
     }
     #thebutton{
         border-radius: 100%;
-        
+        width: 80px;
+        padding: 2px;
+
     }
 }
 
