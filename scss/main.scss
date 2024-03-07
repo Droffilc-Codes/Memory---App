@@ -103,16 +103,22 @@ h1{
     text-transform: uppercase;
     font-size: medium;
 
+    
     text-align: center;
     justify-content: center;
 
     .button{
         position: relative;
         cursor: pointer; 
+        border-radius: 100%;
     }
     .button:hover{
         background: $secondary2-background-color;
         color: $secondary-font-color;
+    }
+    #thebutton{
+        border-radius: 100%;
+        
     }
 }
 
