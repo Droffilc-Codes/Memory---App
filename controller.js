@@ -49,6 +49,12 @@ const userChoice = document.querySelector('.bottom-image')
 let theFirstBox = document.querySelector('.first-box')
 const playButton = document.querySelector('#thebutton')
 
+playButton.addEventListener('click', clickPlayButton);
+
+function clickPlayButton() {
+    // Bring back top image - randomly
+    location.reload();
+}
 
 //re-order the arrays of Faces
 // theFaces.sort(()=> 0.5 - Math.random() )
