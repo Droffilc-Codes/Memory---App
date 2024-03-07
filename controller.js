@@ -47,6 +47,7 @@ const theFaces = [
 const projectedImage = document.querySelector('.top-image')
 const userChoice = document.querySelector('.bottom-image')
 let theFirstBox = document.querySelector('.first-box')
+const playButton = document.querySelector('#thebutton')
 
 
 //re-order the arrays of Faces
