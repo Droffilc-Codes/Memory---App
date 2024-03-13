@@ -51,42 +51,53 @@ const playButton = document.querySelector('#thebutton')
 
 playButton.addEventListener('click', clickPlayButton);
 
-function clickPlayButton() {
-    // Bring back top image - randomly
-    // location.reload();
-    controller1()
+/*
+    plain picture at the start
+    click the play button
+    random picture appears and disappears
+    other pics slide show begins
+    get result
+*/
+let randomValue
+projectedImage.src = '/images/blank.png'
 
+
+function clickPlayButton() {
+    controller1()
+ 
 }
 
 // The game controller
 
 
 function controller1 (){
+console.log((theFirstBox.classList.contains('removeFace')))
 
-let randomValue = Math.floor(Math.random() * theFaces.length)
+randomValue = Math.floor(Math.random() * theFaces.length)
 console.log(randomValue)
 
 //Set the image to be matched
 projectedImage.src = theFaces[randomValue].img
 
-//Store the image to be matched with the id
-let loadedImage = []
-if(loadedImage.length>0){
-    loadedImage.length = 0
+
+
+
+function removeFace (){
+    if(theFirstBox.classList.contains('removeFace')){
+           theFirstBox.classList.remove('removeFace')
+        //    projectedImage.src = '/images/blank.png'
+           console.log("Started Again!")
+       }else{
+           theFirstBox.classList.add('removeFace')
+           console.log("deleted first box")
+       }
 }
 
-loadedImage.push(theFaces[randomValue].id)
+// }
+// //Show the face to be matched and then remove it
+let timerId = null
+timerId = setTimeout(removeFace, 1500)
 
- // Test
- theFirstBox.style.display = 'block'
-if(theFirstBox.style.display == 'none'){
-    console.log("It will not show")
-}else{
-    console.log("It will show")
-
-}
-//Show the face to be matched and then remove it
-let removeTopImage = setInterval(()=>{theFirstBox.style.display = 'none'}, 2500)
 
 //Reel out all the faces in the database
 let currentFaces = theFaces.length
@@ -96,34 +107,34 @@ function endRandomFaces(){
     console.log(currentFaces)
     userChoice.src = theFaces[currentFaces].img
     userChoice.setAttribute('id', theFaces[currentFaces].id)
-    console.log(loadedImage[0])
     if(currentFaces === 0){
         clearInterval(countDownFaces)
     }
 }
 
 let countDownFaces = setInterval(endRandomFaces, 2000)
+
 //Click and see the id number
 userChoice.addEventListener('click', (e)=>{
     let getId = e.target.id
     let getIdReal = parseInt(getId)
-
+    let ourScore = theFaces[randomValue].id
    // If nothing is selected -- tell me
-    if(loadedImage[0] === getIdReal){
-        console.log(loadedImage[0], getIdReal)
+    if(ourScore === getIdReal){
         console.log("They Matched!")
         clearInterval(countDownFaces)
-        // clearInterval(removeTopImage)
+        console.log((theFirstBox.classList.contains('removeFace')))
+        theFirstBox.classList.remove('removeFace')
     }else{
-        console.log(loadedImage[0], getIdReal)
         console.log("No Match!")
         clearInterval(countDownFaces)
-        // clearInterval(removeTopImage)
+       console.log((theFirstBox.classList.contains('removeFace')))
+       theFirstBox.classList.remove('removeFace')
 
     }
 })
-
 }
+
 
 
 

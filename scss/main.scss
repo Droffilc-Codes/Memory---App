@@ -33,17 +33,19 @@ h1{
     margin: 1rem auto;
     width: 120px;
     display: block;
+    height: 100px;
     
     border-radius: 9px;
     background: $secondary-background-color;
     padding: 5px;
-
+    transition: all 0.5 ease-out;
     
     .image-container{
         display: flex;
         .top-image{
             padding: 5px;
             margin: 0 auto;
+            height: 85px;
 
         }
     }
@@ -88,18 +90,14 @@ h1{
     width: 100px;
 }
 
-#footer{
-    margin: 5px auto;
-    text-align: center;
-    font-size: 12px;
-}
+
 
 .restart {
     position: absolute;
     z-index: 3;
     top: 100px;
-    left: 1040px;
-    color: rgb(222, 72, 72);
+    left: 340px;
+    color: rgb(222, 72, 72); 
     text-transform: uppercase;
     font-size: medium;
 
@@ -127,4 +125,17 @@ h1{
 .restart button{
     top: 100;
     //to be used soon!
+}
+
+
+.removeFace {
+    height: 0;
+    overflow: hidden;
+}
+
+
+#footer{
+    margin: 5px auto;
+    text-align: center;
+    font-size: 12px;
 }
